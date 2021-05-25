@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/hoangulrich/PostsApp/issues"
   },
-  "homepage": "https://github.com/hoangulrich/PostsApp#readme"
+  "homepage": "https://github.com/hoangulrich/PostsApp#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "config": "^3.3.6",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.12.11",
+    "nodemon": "^2.0.7"
+  }
 }
