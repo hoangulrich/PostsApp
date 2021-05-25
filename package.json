@@ -1,0 +1,19 @@
+{
+  "name": "postsapp",
+  "version": "1.0.0",
+  "description": "self project for posting editing and deleting",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoangulrich/PostsApp.git"
+  },
+  "author": "Hoang Le",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoangulrich/PostsApp/issues"
+  },
+  "homepage": "https://github.com/hoangulrich/PostsApp#readme"
+}
