@@ -4,9 +4,9 @@ const router = express.Router()
 //Load model
 const Post = require('../models/Post')
 
-//Test
-router.get('/', (req, res) => {
-    res.send('This is router post')
+//Render form to add post
+router.get('/add', (req, res) => {
+    res.render('posts/add')
 })
 
 module.exports = router
