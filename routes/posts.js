@@ -9,4 +9,7 @@ router.get('/add', (req, res) => {
     res.render('posts/add')
 })
 
+//create new post
+router.post('/', async())
+
 module.exports = router

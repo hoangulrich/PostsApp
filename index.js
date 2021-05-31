@@ -2,7 +2,7 @@ const express = require('express')
 const connectDB = require('./config/db')
 const posts = require('./routes/posts')
 const hbs = require('express-handlebars')
-
+const bodyParser = require('body-parser')
 //init express
 const app = express()
 
@@ -17,6 +17,10 @@ connectDB()
 //basic routes
 app.get('/', (req, res) => res.render('index'))
 app.get('/about', (req,res)=>res.render('about'))
+
+//body parser middleware
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
 
 //use routes
 app.use('/posts', posts)
