@@ -11,16 +11,16 @@ app.use(express.json())
 app.engine('handlebars', hbs())
 app.set('view engine', 'handlebars')
 
+//body parser middleware
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
+
 //connect database
 connectDB()
 
 //basic routes
 app.get('/', (req, res) => res.render('index'))
 app.get('/about', (req,res)=>res.render('about'))
-
-//body parser middleware
-app.use(bodyParser.urlencoded({extended: false}))
-app.use(bodyParser.json())
 
 //use routes
 app.use('/posts', posts)
