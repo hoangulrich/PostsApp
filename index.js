@@ -29,6 +29,6 @@ app.get('/about', (req,res)=>res.render('about'))
 //use routes
 app.use('/posts', posts)
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000
 
 app.listen(PORT, () => console.log(`Server khoi dong tai port ${PORT}`))
