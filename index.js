@@ -3,6 +3,7 @@ const connectDB = require('./config/db')
 const posts = require('./routes/posts')
 const hbs = require('express-handlebars')
 const bodyParser = require('body-parser')
+const methodOverride = require('method-override')
 //init express
 const app = express()
 
@@ -14,6 +15,9 @@ app.set('view engine', 'handlebars')
 //body parser middleware
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
+
+//methodOverride middleware
+app.use(methodOverride('_method'))
 
 //connect database
 connectDB()

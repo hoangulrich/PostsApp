@@ -13,7 +13,7 @@ const connectDB = async () =>
             useFindAndModify: false
         }
         )
-        console.log('Da ket noi csdl')
+        console.log('Database connected')
     } catch (error)
     {
         console.log(error.message)

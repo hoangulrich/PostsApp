@@ -32,4 +32,17 @@ router.post('/', async(req, res) => {
     }
 })
 
+//Form for edit post
+router.get('/edit/:id', async(req, res) => {
+    const post = await Post.findOne({_id: req.params.id}).lean()
+    res.render('posts/edit', {post})
+})
+
+//Update
+router.put('/:id', async(req, res) => {
+    const {title, text} = req.body
+    await Post.findOneAndUpdate({_id: req.params.id}, {title, text})
+    res.redirect('/posts')
+})
+
 module.exports = router
